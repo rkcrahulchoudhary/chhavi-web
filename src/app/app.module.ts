@@ -3,14 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TodoModule } from './todoList/todo/todo.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CreateTodoComponent } from './todoList/create-todo/create-todo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditTodoComponent } from './todoList/edit-todo/edit-todo.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreateTodoComponent,
+    EditTodoComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TodoModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    FormsModule,ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

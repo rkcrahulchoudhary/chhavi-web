@@ -1,0 +1,33 @@
+<div class="card m-3">
+    <h5 class="card-header">Create New Todo</h5>
+    <div class="card-body">
+        <form [formGroup]='todoForm' class="m-form m-form--label-align-left" (ngSubmit)="onSubmit()">
+            <div class="form-row col-12">
+                <div class="form-group">
+                    <label>Year</label>
+                    <select formControlName="year" class="form-control" >
+                        <option value="2022">2022</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+            <div class="form-group">
+                <label>Make</label>
+                <input type="text" formControlName="make" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Model</label>
+                <input type="text" formControlName="model" class="form-control" />
+            </div>
+            </div>
+           
+            <div class="form-group form-check">
+                <button class="btn btn-primary mr-1">Create</button>
+                <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+            </div>
+
+            </form>
+            </div>
+            </div>
+            
