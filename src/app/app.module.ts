@@ -10,6 +10,7 @@ import { CreateTodoComponent } from './todoList/create-todo/create-todo.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditTodoComponent } from './todoList/edit-todo/edit-todo.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     
   ],
   imports: [
+    //CommonModule,
     BrowserModule,
     AppRoutingModule,
     TodoModule,

@@ -8,6 +8,8 @@ import { CreateTodoComponent } from '../create-todo/create-todo.component';
   styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
+
+  displayedColumns = ['model','make','year', 'action', 'action1'];
   dataSource;
   constructor(
     public dialog: MatDialog,
@@ -28,10 +30,10 @@ export class TodoComponent implements OnInit {
 
   showTable() {
     this._todoService.getTodoDetail().subscribe(res => {
-      console.log("res: ",res);
       if (res < 0 || res == "") {
       } else {
-        this.dataSource = res;
+        this.dataSource = res.data;
+        console.log("this.dataSource: :",this.dataSource);
         this.changeDetectedRef.detectChanges();
       }
     })

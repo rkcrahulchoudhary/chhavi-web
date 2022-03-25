@@ -37,9 +37,11 @@ export class CreateTodoComponent implements OnInit {
 
 
   onSubmit(){
-    console.log("this.todoForm: ",this.todoForm.value);
     this._todoService.creatTodo(this.todoForm.value).subscribe(res =>{
-
+if(res.status == true){
+      this.dialogRef.close();
+      this.todoForm.reset();
+}
     })
   }
   

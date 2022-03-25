@@ -23,3 +23,25 @@
       Your Todo's List
     </h3>
   </div>
+
+  <div>
+  <table class="table table-striped">
+    <thead>
+      <ul>
+        <li *ngFor="let i of [1,2,3,4,5]"> {{i}}</li>
+       
+      </ul>
+    </thead>
+    <tbody>
+      <ul *ngFor="let d of dataSource" >
+        <td>1</td>
+        <td>{{ d.model}}</td>
+        <td>{{ d.make}}</td>
+        <td>{{ d.year}}</td>
+        <td><button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button></td>
+        <td><button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></td>
+      </ul>
+      </tbody>
+      </table>
+    </div>
+      
